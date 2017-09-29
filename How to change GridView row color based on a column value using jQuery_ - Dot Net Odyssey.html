@@ -1,0 +1,538 @@
+
+
+
+
+
+<!DOCTYPE html>
+<!--[if IE 9]><html class="no-js ie9" lang="en-US" prefix="og: http://ogp.me/ns#"><![endif]-->
+<!--[if gt IE 9]><!--><html class="no-js" lang="en-US" prefix="og: http://ogp.me/ns#"><!--<![endif]-->
+
+<head>
+  
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to change GridView row color based on a column value using jQuery? - Dot Net Odyssey</title>
+<link rel="pingback" href="http://www.dotnetodyssey.com/xmlrpc.php">
+<!-- This site is optimized with the Yoast SEO plugin v4.7 - https://yoast.com/wordpress/plugins/seo/ -->
+<meta name="description" content="This article explains you how to change GridView row color based on a column value using jQuery. Complete javascript code given with explanation."/>
+<meta name="robots" content="noodp"/>
+<link rel="canonical" href="http://www.dotnetodyssey.com/2015/01/08/change-gridview-row-color-based-column-value-using-jquery/" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="How to change GridView row color based on a column value using jQuery? - Dot Net Odyssey" />
+<meta property="og:description" content="This article explains you how to change GridView row color based on a column value using jQuery. Complete javascript code given with explanation." />
+<meta property="og:url" content="http://www.dotnetodyssey.com/2015/01/08/change-gridview-row-color-based-column-value-using-jquery/" />
+<meta property="og:site_name" content="Dot Net Odyssey" />
+<meta property="article:section" content="ASP.Net" />
+<meta property="article:published_time" content="2015-01-08T04:00:23+00:00" />
+<meta property="article:modified_time" content="2015-01-08T04:05:48+00:00" />
+<meta property="og:updated_time" content="2015-01-08T04:05:48+00:00" />
+<meta property="og:image" content="http://www.dotnetodyssey.com/wp-content/uploads/2015/01/GridView_Highlighted-300x189.jpg" />
+<meta property="og:image" content="http://www.dotnetodyssey.com/wp-content/uploads/2015/01/jQuery-Selector-Gridview.jpg" />
+<!-- / Yoast SEO plugin. -->
+
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Dot Net Odyssey &raquo; Feed" href="http://www.dotnetodyssey.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Dot Net Odyssey &raquo; Comments Feed" href="http://www.dotnetodyssey.com/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Dot Net Odyssey &raquo; How to change GridView row color based on a column value using jQuery? Comments Feed" href="http://www.dotnetodyssey.com/2015/01/08/change-gridview-row-color-based-column-value-using-jquery/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.3\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.3\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/www.dotnetodyssey.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.8.2"}};
+			!function(a,b,c){function d(a){var b,c,d,e,f=String.fromCharCode;if(!k||!k.fillText)return!1;switch(k.clearRect(0,0,j.width,j.height),k.textBaseline="top",k.font="600 32px Arial",a){case"flag":return k.fillText(f(55356,56826,55356,56819),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,56826,8203,55356,56819),0,0),c=j.toDataURL(),b!==c&&(k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447),0,0),c=j.toDataURL(),b!==c);case"emoji4":return k.fillText(f(55358,56794,8205,9794,65039),0,0),d=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55358,56794,8203,9794,65039),0,0),e=j.toDataURL(),d!==e}return!1}function e(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i,j=b.createElement("canvas"),k=j.getContext&&j.getContext("2d");for(i=Array("flag","emoji4"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='x-stack-css'  href='http://www.dotnetodyssey.com/wp-content/themes/x/framework/css/site/stacks/integrity-light.css?ver=4.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='x-google-fonts-css'  href='//fonts.googleapis.com/css?family=Lato%3A400%2C400italic%2C700%2C700italic&#038;subset=latin%2Clatin-ext&#038;ver=4.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='x-fa-icon-classes-css'  href='http://www.dotnetodyssey.com/wp-content/plugins/cornerstone/assets/css/site/fa-icon-classes.css?ver=1.0.11' type='text/css' media='all' />
+<link rel='stylesheet' id='amazon-link-style-css'  href='http://www.dotnetodyssey.com/wp-content/plugins/amazon-link/Amazon.css?ver=3.2.6' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-gist-style-css'  href='http://www.dotnetodyssey.com/wp-content/plugins/wp-gist/css/style.min.css?ver=3.0.0' type='text/css' media='all' />
+<!-- This site uses the Google Analytics by MonsterInsights plugin v6.1.7 - Using Analytics tracking - https://www.monsterinsights.com/ -->
+<script type="text/javascript" data-cfasync="false">
+	/* Function to detect opted out users */
+	function __gaTrackerIsOptedOut() {
+		return document.cookie.indexOf(disableStr + '=true') > -1;
+	}
+
+	/* Disable tracking if the opt-out cookie exists. */
+	var disableStr = 'ga-disable-UA-47710837-1';
+	if ( __gaTrackerIsOptedOut() ) {
+		window[disableStr] = true;
+	}
+
+	/* Opt-out function */
+	function __gaTrackerOptout() {
+	  document.cookie = disableStr + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
+	  window[disableStr] = true;
+	}
+
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','__gaTracker');
+
+	__gaTracker('create', 'UA-47710837-1', 'auto');
+	__gaTracker('set', 'forceSSL', true);
+	__gaTracker('send','pageview');
+</script>
+<!-- / Google Analytics by MonsterInsights -->
+<script type='text/javascript' src='http://www.dotnetodyssey.com/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+<script type='text/javascript' src='http://www.dotnetodyssey.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<script type='text/javascript' src='http://www.dotnetodyssey.com/wp-content/themes/x/framework/js/dist/site/x-head.min.js?ver=4.3.0'></script>
+<script type='text/javascript' src='http://www.dotnetodyssey.com/wp-content/plugins/cornerstone/assets/js/dist/site/cs-head.min.js?ver=1.0.11'></script>
+<link rel='https://api.w.org/' href='http://www.dotnetodyssey.com/wp-json/' />
+<link rel='shortlink' href='http://www.dotnetodyssey.com/?p=222' />
+<link rel="alternate" type="application/json+oembed" href="http://www.dotnetodyssey.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fwww.dotnetodyssey.com%2F2015%2F01%2F08%2Fchange-gridview-row-color-based-column-value-using-jquery%2F" />
+<link rel="alternate" type="text/xml+oembed" href="http://www.dotnetodyssey.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fwww.dotnetodyssey.com%2F2015%2F01%2F08%2Fchange-gridview-row-color-based-column-value-using-jquery%2F&#038;format=xml" />
+<script data-cfasync="false" src="//load.sumome.com/" data-sumo-platform="wordpress" data-sumo-site-id="c8a6da42a52a1aa4ab3fa863fc82cfa23af8a86e6c086a3eaba9d27116561c47" async></script><meta property="og:site_name" content="Dot Net Odyssey"><meta property="og:title" content="How to change GridView row color based on a column value using jQuery?"><meta property="og:description" content="You want to change GridView row color based on column value using jQuery. In the below Gridview, rows whose Reorder Point value(3rd column) less than 400 are highlighted with lavender color. SideNote: I have used Production.Product&hellip;"><meta property="og:image" content=""><meta property="og:url" content="http://www.dotnetodyssey.com/2015/01/08/change-gridview-row-color-based-column-value-using-jquery/"><meta property="og:type" content="article"><style type="text/css" id="syntaxhighlighteranchor"></style>
+<style id="x-generated-css" type="text/css">a,h1 a:hover,h2 a:hover,h3 a:hover,h4 a:hover,h5 a:hover,h6 a:hover,.x-topbar .p-info a:hover,.x-breadcrumb-wrap a:hover,.widget ul li a:hover,.widget ol li a:hover,.widget.widget_text ul li a,.widget.widget_text ol li a,.widget_nav_menu .current-menu-item > a,.x-widgetbar .widget ul li a:hover,.x-accordion-heading .x-accordion-toggle:hover,.x-comment-author a:hover,.x-comment-time:hover,.x-recent-posts a:hover .h-recent-posts{color:#ff2a13;}a:hover,.widget.widget_text ul li a:hover,.widget.widget_text ol li a:hover,.x-twitter-widget ul li a:hover{color:#d80f0f;}.rev_slider_wrapper,a.x-img-thumbnail:hover,.x-slider-container.below,.page-template-template-blank-3-php .x-slider-container.above,.page-template-template-blank-6-php .x-slider-container.above{border-color:#ff2a13;}.entry-thumb:before,.pagination span.current,.flex-direction-nav a,.flex-control-nav a:hover,.flex-control-nav a.flex-active,.mejs-time-current,.x-dropcap,.x-skill-bar .bar,.x-pricing-column.featured h2,.h-comments-title small,.x-entry-share .x-share:hover,.x-highlight,.x-recent-posts .x-recent-posts-img:after{background-color:#ff2a13;}.x-nav-tabs > .active > a,.x-nav-tabs > .active > a:hover{box-shadow:inset 0 3px 0 0 #ff2a13;}.x-main{width:69.536945%;}.x-sidebar{width:25.536945%;}.x-topbar .p-info,.x-topbar .p-info a,.x-navbar .desktop .x-nav > li > a,.x-navbar .desktop .sub-menu a,.x-navbar .mobile .x-nav li > a,.x-breadcrumb-wrap a,.x-breadcrumbs .delimiter{color:#999999;}.x-navbar .desktop .x-nav > li > a:hover,.x-navbar .desktop .x-nav > .x-active > a,.x-navbar .desktop .x-nav > .current-menu-item > a,.x-navbar .desktop .sub-menu a:hover,.x-navbar .desktop .sub-menu .x-active > a,.x-navbar .desktop .sub-menu .current-menu-item > a,.x-navbar .desktop .x-nav .x-megamenu > .sub-menu > li > a,.x-navbar .mobile .x-nav li > a:hover,.x-navbar .mobile .x-nav .x-active > a,.x-navbar .mobile .x-nav .current-menu-item > a{color:#272727;}.x-navbar .desktop .x-nav > li > a:hover,.x-navbar .desktop .x-nav > .x-active > a,.x-navbar .desktop .x-nav > .current-menu-item > a{box-shadow:inset 0 4px 0 0 #ff2a13;}.x-navbar .desktop .x-nav > li > a{height:90px;padding-top:37px;}.x-navbar-fixed-top-active .x-navbar-wrap{margin-bottom:1px;}.x-navbar .desktop .x-nav > li ul{top:75px;;}.x-comment-author,.x-comment-time,.comment-form-author label,.comment-form-email label,.comment-form-url label,.comment-form-rating label,.comment-form-comment label,.widget_calendar #wp-calendar caption,.widget.widget_rss li .rsswidget{font-family:Lato;font-weight:700;}.p-landmark-sub,.p-meta,input,button,select,textarea{font-family:Lato;}.widget ul li a,.widget ol li a,.x-comment-time{color:#7a7a7a;}.widget_text ol li a,.widget_text ul li a{color:#ff2a13;}.widget_text ol li a:hover,.widget_text ul li a:hover{color:#d80f0f;}.comment-form-author label,.comment-form-email label,.comment-form-url label,.comment-form-rating label,.comment-form-comment label,.widget_calendar #wp-calendar th,.p-landmark-sub strong,.widget_tag_cloud .tagcloud a:hover,.widget_tag_cloud .tagcloud a:active,.entry-footer a:hover,.entry-footer a:active,.x-breadcrumbs .current,.x-comment-author,.x-comment-author a{color:#272727;}.widget_calendar #wp-calendar th{border-color:#272727;}.h-feature-headline span i{background-color:#272727;}@media (max-width:979px){.x-navbar-fixed-top-active .x-navbar-wrap{margin-bottom:0;}}body{font-size:14px;font-style:normal;font-weight:400;color:#7a7a7a;background-color:#f3f3f3;}a:focus,select:focus,input[type="file"]:focus,input[type="radio"]:focus,input[type="submit"]:focus,input[type="checkbox"]:focus{outline:thin dotted #333;outline:5px auto #ff2a13;outline-offset:-1px;}h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6{font-family:"Lato",sans-serif;font-style:normal;font-weight:700;}h1,.h1{letter-spacing:0.017em;}h2,.h2{letter-spacing:0.023em;}h3,.h3{letter-spacing:0.029em;}h4,.h4{letter-spacing:0.039em;}h5,.h5{letter-spacing:0.044em;}h6,.h6{letter-spacing:0.067em;}.w-h{font-weight:700 !important;}.x-container.width{width:88%;}.x-container.max{max-width:1200px;}.x-main.full{float:none;display:block;width:auto;}@media (max-width:979px){.x-main.full,.x-main.left,.x-main.right,.x-sidebar.left,.x-sidebar.right{float:none;display:block;width:auto !important;}}.entry-header,.entry-content{font-size:16px;}body,input,button,select,textarea{font-family:"Lato",sans-serif;}h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6,h1 a,h2 a,h3 a,h4 a,h5 a,h6 a,.h1 a,.h2 a,.h3 a,.h4 a,.h5 a,.h6 a,blockquote{color:#272727;}.cfc-h-tx{color:#272727 !important;}.cfc-h-bd{border-color:#272727 !important;}.cfc-h-bg{background-color:#272727 !important;}.cfc-b-tx{color:#7a7a7a !important;}.cfc-b-bd{border-color:#7a7a7a !important;}.cfc-b-bg{background-color:#7a7a7a !important;}body.x-navbar-fixed-top-active .x-navbar-wrap{height:90px;}.x-navbar-inner{min-height:90px;}.x-brand{margin-top:22px;font-family:"Lato",sans-serif;font-size:42px;font-style:normal;font-weight:400;letter-spacing:0.019em;color:#272727;}.x-brand:hover,.x-brand:focus{color:#272727;}.x-navbar .x-nav-wrap .x-nav > li > a{font-family:"Lato",sans-serif;font-style:normal;font-weight:700;letter-spacing:0em;text-transform:uppercase;}.x-navbar .desktop .x-nav > li > a{font-size:13px;}.x-navbar .desktop .x-nav > li > a:not(.x-btn-navbar-woocommerce){padding-left:px;padding-right:px;}.x-navbar .desktop .x-nav > li > a > span{margin-right:-0em;}.x-btn-navbar{margin-top:20px;}.x-btn-navbar,.x-btn-navbar.collapsed{font-size:24px;}@media (max-width:979px){body.x-navbar-fixed-top-active .x-navbar-wrap{height:auto;}.x-widgetbar{left:0;right:0;}}.x-btn,.button,[type="submit"]{color:#ffffff;border-color:#ac1100;background-color:#ff2a13;margin-bottom:0.25em;text-shadow:0 0.075em 0.075em rgba(0,0,0,0.5);box-shadow:0 0.25em 0 0 #a71000,0 4px 9px rgba(0,0,0,0.75);border-radius:0.25em;}.x-btn:hover,.button:hover,[type="submit"]:hover{color:#ffffff;border-color:#600900;background-color:#ef2201;margin-bottom:0.25em;text-shadow:0 0.075em 0.075em rgba(0,0,0,0.5);box-shadow:0 0.25em 0 0 #a71000,0 4px 9px rgba(0,0,0,0.75);}.x-btn.x-btn-real,.x-btn.x-btn-real:hover{margin-bottom:0.25em;text-shadow:0 0.075em 0.075em rgba(0,0,0,0.65);}.x-btn.x-btn-real{box-shadow:0 0.25em 0 0 #a71000,0 4px 9px rgba(0,0,0,0.75);}.x-btn.x-btn-real:hover{box-shadow:0 0.25em 0 0 #a71000,0 4px 9px rgba(0,0,0,0.75);}.x-btn.x-btn-flat,.x-btn.x-btn-flat:hover{margin-bottom:0;text-shadow:0 0.075em 0.075em rgba(0,0,0,0.65);box-shadow:none;}.x-btn.x-btn-transparent,.x-btn.x-btn-transparent:hover{margin-bottom:0;border-width:3px;text-shadow:none;text-transform:uppercase;background-color:transparent;box-shadow:none;}
+.x-subscribe-form {
+  position: relative;
+}
+
+.x-subscribe-form h1 {
+  font-size: 1.75em;
+  margin: 0 0 0.5em;
+}
+
+.x-subscribe-form label {
+  margin: 0 0 0.375em;
+  font-size: 0.85em;
+  line-height: 1;
+}
+
+.x-subscribe-form label > span {
+  position: relative;
+}
+
+.x-subscribe-form label .required {
+  position: absolute;
+  top: -0.1em;
+  font-size: 1.5em;
+}
+
+.x-subscribe-form input[type="text"],
+.x-subscribe-form input[type="email"] {
+  width: 100%;
+  margin-bottom: 1.25em;
+  font-size: inherit;
+}
+
+.x-subscribe-form input[type="submit"] {
+  display: inline-block;
+  width: 100%;
+  margin-top: 0.25em;
+  font-size: inherit;
+}
+
+.x-subscribe-form input[type="submit"]:focus {
+  outline: 0;
+}
+
+.x-subscribe-form .x-subscribe-form-alert-wrap {
+  margin-top: 1.25em;
+  font-size: inherit;
+}</style></head>
+
+<body class="post-template-default single single-post postid-222 single-format-standard x-integrity x-integrity-light x-navbar-fixed-top-active x-full-width-layout-active x-content-sidebar-active x-post-meta-disabled x-portfolio-meta-disabled x-v4_3_0 cornerstone-v1_0_11">
+
+  
+  <div id="top" class="site">
+
+  
+  
+  <header class="masthead masthead-inline" role="banner">
+    
+    
+
+  <div class="x-navbar-wrap">
+    <div class="x-navbar">
+      <div class="x-navbar-inner">
+        <div class="x-container max width">
+          
+
+<a href="http://www.dotnetodyssey.com/" class="x-brand text" title="Helping fellow .Net developers to achieve their goals..">
+  Dot Net Odyssey</a>          
+<a href="#" class="x-btn-navbar collapsed" data-toggle="collapse" data-target=".x-nav-wrap.mobile">
+  <i class="x-icon-bars" data-x-icon="&#xf0c9;"></i>
+  <span class="visually-hidden">Navigation</span>
+</a>
+
+<nav class="x-nav-wrap desktop" role="navigation">
+  <ul id="menu-x-demo-menu" class="x-nav"><li id="menu-item-281" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-281"><a href="http://www.dotnetodyssey.com/about-me/"><span>About Me&#8230;</span></a></li>
+<li id="menu-item-348" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-348"><a href="http://www.dotnetodyssey.com/free-ebooks/"><span>Free eBooks</span></a>
+<ul  class="sub-menu">
+	<li id="menu-item-349" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-349"><a href="http://www.dotnetodyssey.com/free-ebooks/7-most-popular-recipes-of-jquery-with-asp-net-web-forms-free-ebook/"><span>The 7 Most Popular Recipes of jQuery with ASP.NET Web Forms &#8211; Free ebook</span></a></li>
+	<li id="menu-item-350" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-350"><a href="http://www.dotnetodyssey.com/free-ebooks/value-reference-types-in-c-free-ebook/"><span>Value &#038; Reference types in C# &#8211; Free eBook</span></a></li>
+</ul>
+</li>
+<li id="menu-item-418" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-418"><a href="http://www.dotnetodyssey.com/asp-net-mvc-5-free-course/"><span>ASP.Net MVC 5 Free Course</span></a></li>
+</ul></nav>
+
+<div class="x-nav-wrap mobile collapse">
+  <ul id="menu-x-demo-menu-1" class="x-nav"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-281"><a href="http://www.dotnetodyssey.com/about-me/"><span>About Me&#8230;</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-348"><a href="http://www.dotnetodyssey.com/free-ebooks/"><span>Free eBooks</span></a>
+<ul  class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-349"><a href="http://www.dotnetodyssey.com/free-ebooks/7-most-popular-recipes-of-jquery-with-asp-net-web-forms-free-ebook/"><span>The 7 Most Popular Recipes of jQuery with ASP.NET Web Forms &#8211; Free ebook</span></a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-350"><a href="http://www.dotnetodyssey.com/free-ebooks/value-reference-types-in-c-free-ebook/"><span>Value &#038; Reference types in C# &#8211; Free eBook</span></a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-418"><a href="http://www.dotnetodyssey.com/asp-net-mvc-5-free-course/"><span>ASP.Net MVC 5 Free Course</span></a></li>
+</ul></div>        </div>
+      </div>
+    </div>
+  </div>
+
+    
+  
+    <div class="x-breadcrumb-wrap">
+      <div class="x-container max width">
+
+        <div class="x-breadcrumbs"><a href="http://www.dotnetodyssey.com"><span class="home"><i class="x-icon-home" data-x-icon="&#xf015;"></i></span></a> <span class="delimiter"><i class="x-icon-angle-right" data-x-icon="&#xf105;"></i></span> <span class="current">How to change GridView row color based on a column value using jQuery?</span></div>
+                  
+  <div class="x-nav-articles">
+
+          <a href="http://www.dotnetodyssey.com/2015/01/09/show-hide-item-checkbox-checked-unchecked-asp-net-using-jquery/" title="" class="prev">
+        <i class="x-icon-arrow-left" data-x-icon="&#xf060;"></i>      </a>
+    
+          <a href="http://www.dotnetodyssey.com/2015/01/07/set-radio-button-selected-value-using-jquery-radiobuttonlist/" title="" class="next">
+        <i class="x-icon-arrow-right" data-x-icon="&#xf061;"></i>      </a>
+    
+  </div>
+
+          
+      </div>
+    </div>
+
+    </header>
+
+    
+  
+  <div class="x-container max width offset">
+    <div class="x-main left" role="main">
+
+              
+<article id="post-222" class="post-222 post type-post status-publish format-standard hentry category-asp-net category-jquery no-post-thumbnail">
+  <div class="entry-featured">
+      </div>
+  <div class="entry-wrap">
+    
+<header class="entry-header">
+    <h1 class="entry-title">How to change GridView row color based on a column value using jQuery?</h1>
+    </header>    
+
+
+<div class="entry-content content">
+
+
+  <p>You want to change GridView row color based on column value using jQuery. In the below Gridview, rows whose Reorder Point value(3<sup>rd</sup> column) less than 400 are highlighted with lavender color.</p>
+<p><em>SideNote: I have used Production.Product table of AdventureWorks database(which comes with SQL Express 2012) for this example.</em></p>
+<p><a href="http://www.dotnetodyssey.com/wp-content/uploads/2015/01/GridView_Highlighted.jpg"><img class="aligncenter size-medium wp-image-223" src="http://www.dotnetodyssey.com/wp-content/uploads/2015/01/GridView_Highlighted-300x189.jpg" alt="GridView Highlighted" width="300" height="189" srcset="http://www.dotnetodyssey.com/wp-content/uploads/2015/01/GridView_Highlighted-300x189.jpg 300w, http://www.dotnetodyssey.com/wp-content/uploads/2015/01/GridView_Highlighted.jpg 383w" sizes="(max-width: 300px) 100vw, 300px" /></a></p>
+<p><strong>Few Facts First:</strong></p>
+<p>Before arriving at the logic for highlighting the gridview rows with different color, you need to understand couple of important facts.</p>
+<p>Fact 1: jQuery, a javascript library, used for manipulation of web documents &#8211;  resides at browser side.</p>
+<p>Fact 2: Browsers can understand only HTML, CSS and javascript. Because of this fact, Gridview(ASP.Net server control for displaying the table) would be converted to table(table html element), rows (tr html element) and columns (td html element) while sending it to client (browser).</p>
+<p>So, if you want to process the GridView using jQuery, we should process the generated table html element with associated row and column elements. Browser does not what GridView is. It just knows about table (table html element), rows (tr html element), columns (td html element).</p>
+<p><strong>Logic:</strong></p>
+<p>The logic for changing the gridview row color based on column value is pretty simple and involves the below steps</p>
+<ol>
+<li>Loop through all the rows on that particular column value. In the above case, we would be looping the 3<sup>rd</sup> column (Reorder Point) in all the rows</li>
+<li>Get the value of 3rd column(ReOrder Point) in that row and compare it with required value</li>
+<li>If it’s less than the required value, change the background color to lavender</li>
+</ol>
+<p>Let us discuss on how to achieve each of the above mentioned step in detail</p>
+<h4><strong>1. Loop through all the rows on that particular column value:</strong></h4>
+<p>We need couple of pieces of information for this.</p>
+<p>There might be many GridView controls used in a Web Form. We need to uniquely identify that particular gridview on which rows have to be highlighted – so we need to have the id of the gridview. The id of the gridview would be id of the generated table element at client side.</p>
+<p>We need to know on which column, the value has to be compared. In the above case, we are comparing the value to the values in ReOrder Point (3<sup>rd</sup> column). So we need to have the column index.</p>
+<p>We can use the below jQuery selector to select 3<sup>rd</sup> column in all the rows, if you pass columnIndex as 3 and gridviewID</p>
+<pre class="brush: jscript; title: ; notranslate" title="">
+
+$(&quot;#&quot; + gridviewID + &quot; td:nth-child(&quot; + columnIndex + &quot;)&quot;)
+
+</pre>
+<p><a href="http://www.dotnetodyssey.com/wp-content/uploads/2015/01/jQuery-Selector-Gridview.jpg"><img class="aligncenter size-full wp-image-224" src="http://www.dotnetodyssey.com/wp-content/uploads/2015/01/jQuery-Selector-Gridview.jpg" alt="jQuery Selector Gridview" width="960" height="632" srcset="http://www.dotnetodyssey.com/wp-content/uploads/2015/01/jQuery-Selector-Gridview.jpg 960w, http://www.dotnetodyssey.com/wp-content/uploads/2015/01/jQuery-Selector-Gridview-300x197.jpg 300w" sizes="(max-width: 960px) 100vw, 960px" /></a>To loop through all the n<sup>th</sup> column values, we can use <strong>each</strong> iterator function of jQuery. Whatever function you pass here as parameter would be called for all the values.</p>
+<pre class="brush: jscript; title: ; notranslate" title="">
+
+$(&quot;#&quot; + gridviewID + &quot; td:nth-child(&quot; + columnIndex + &quot;)&quot;).each(function () {
+
+    //This code which would be called for 3rd column values of all rows
+
+});
+
+</pre>
+<h4>2. Get the value of 3rd column(ReOrder Point) in that row and compare it with required value</h4>
+<p>As we have selected the 3<sup>rd</sup> column already in Step 1, we just need to get the value and compare it with required value. But before comparing the value, we need to convert the value to integer that we can compare.</p>
+<p>Here <strong>$(this)</strong> represents the current td element in the loop.</p>
+<p><strong>$(this).text()</strong> – this jQuery expression will get you the value. parseInt function converts the value to integer.</p>
+<p><strong>parseInt($(this).text())</strong> – This expression will take the td value(column value) and converts to integer.i.e, 750 for first row in our example.</p>
+<p>Below if conditional statement would compare the column value to required value.</p>
+<pre class="brush: jscript; title: ; notranslate" title="">
+
+if (parseInt($(this).text()) &lt;= value) {
+
+}
+
+</pre>
+<h4>3. If it’s less than the required value, change the background color to lavender</h4>
+<p>We are currently lopping through the column values. If the column value is less than required value, I need to change the row background color. If you see the below generated html fragment for first row, td is the child of tr element. i.e, tr(row) element is the parent of td(column) element</p>
+<pre class="brush: xml; title: ; notranslate" title="">
+
+&lt;tr&gt;
+
+    &lt;td&gt;Adjustable Race&lt;/td&gt;
+
+    &lt;td&gt;AR-5381&lt;/td&gt;
+
+     &lt;td&gt;750&lt;/td&gt;
+
+&lt;/tr&gt;
+
+</pre>
+<p>As mentioned above, $(this) represents the td element.<strong> $(this).parent(&#8220;tr&#8221;)</strong> jQuery expression selects the parent tr element of current element(which is td column element). And you can assign the background color by using css function.</p>
+<p>Below is the complete expression for changing the row color to lavendar</p>
+<pre class="brush: jscript; title: ; notranslate" title="">
+
+$(this).parent(&quot;tr&quot;).css(&quot;background-color&quot;, &quot;Lavender&quot;);  
+
+</pre>
+<h4>Complete code for changing the row color of Gridview:</h4>
+<pre class="brush: jscript; title: ; notranslate" title="">
+
+&lt;script type=&quot;text/javascript&quot;&gt;
+
+$(document).ready(function () {
+  HighLightRowsLessThanColumnValue('gvProducts', 3, 400);
+});
+
+function HighLightRowsLessThanColumnValue(gridviewID, columnIndex, value) {
+  $(&quot;#&quot; + gridviewID + &quot; td:nth-child(&quot; + columnIndex + &quot;)&quot;).each(function () {
+    if (parseInt($(this).text()) &lt;= value) {
+      $(this).parent(&quot;tr&quot;).css(&quot;background-color&quot;, &quot;Lavender &quot;);
+    }
+  });
+}
+
+&lt;/script&gt;
+</pre>
+<p>HighLightRowsLessThanColumnValue : This function has 3 parameters – Id of gridview, column index and the value to be compared</p>
+<p>This function would be called when the page DOM is loaded. Here we are passing gvProducts as grdviewID and 3 as column index and if the column value is less than 400- the row has to be highlighted.</p>
+<p>The important point to note here is that the index starts from 1 in the nth-child jQuery selector. It does not starts with zero.</p>
+<p>Thank you for reading the article. If you like this article, please subscribe in the below form.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+  
+
+</div>
+
+  </div>
+  
+</article>        
+      
+<div id="comments" class="x-comments-area">
+  <div id="disqus_thread"></div>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>        
+    </div>
+
+          
+
+
+  <aside class="x-sidebar right" role="complementary">
+          <div id="search-2" class="widget widget_search">
+<form method="get" id="searchform" class="form-search" action="http://www.dotnetodyssey.com/">
+  <label for="s" class="visually-hidden">Search</label>
+  <input type="text" id="s" class="search-query" name="s" placeholder="Search" />
+</form></div>		<div id="recent-posts-2" class="widget widget_recent_entries">		<h4 class="h-widget">Recent Posts</h4>		<ul>
+					<li>
+				<a href="http://www.dotnetodyssey.com/2017/06/14/dollar-symbol-javascript-jquery/">$ symbol in jQuery (and in javascript)</a>
+						</li>
+					<li>
+				<a href="http://www.dotnetodyssey.com/2017/06/07/var-in-c/">var in C#</a>
+						</li>
+					<li>
+				<a href="http://www.dotnetodyssey.com/2017/05/31/difference-fields-properties-c/">Difference between fields and properties in C#</a>
+						</li>
+					<li>
+				<a href="http://www.dotnetodyssey.com/2017/05/24/difference-string-string-c/">Difference between string in String in C#</a>
+						</li>
+					<li>
+				<a href="http://www.dotnetodyssey.com/2015/11/24/why-we-use-html-helpers-in-asp-net-mvc-instead-of-normal-asp-net-controls/">Why we use HTML helpers in ASP.Net MVC instead of normal ASP.Net Controls?</a>
+						</li>
+				</ul>
+		</div>		<div id="categories-2" class="widget widget_categories"><h4 class="h-widget">Categories</h4>		<ul>
+	<li class="cat-item cat-item-5"><a href="http://www.dotnetodyssey.com/category/asp-net/" >ASP.Net</a>
+</li>
+	<li class="cat-item cat-item-13"><a href="http://www.dotnetodyssey.com/category/asp-net-mvc/" >ASP.Net MVC</a>
+</li>
+	<li class="cat-item cat-item-2"><a href="http://www.dotnetodyssey.com/category/c/" >C#</a>
+</li>
+	<li class="cat-item cat-item-3"><a href="http://www.dotnetodyssey.com/category/entity-framework/" >Entity Framework</a>
+</li>
+	<li class="cat-item cat-item-9"><a href="http://www.dotnetodyssey.com/category/jquery/" >jQuery</a>
+</li>
+		</ul>
+</div><div id="x_email_form-5" class="widget widget_x_email_form"><div id="x-section-1" class="x-section" style="background-color: transparent;" ><div  class="x-container" style=""><div  class="x-column x-sm x-1-1" style=""  >
+<form method="post" id="x-subscribe-form-277" class="x-subscribe-form x-subscribe-form-277 center-block mvn" data-x-email-confirm="Message" data-x-email-message="Thank you! You are now subscribed." style="max-width: 600px; font-size: 18px;">
+
+  
+  <input type="hidden" name="x_subscribe_form&#091;id&#093;" value="277">
+
+      <h1>Want actionable useful articles on .Net development? </h1>
+  
+      <fieldset>
+              <label for="x_subscribe_form_first_name">
+          <span>
+            First Name            <span class="required">*</span>          </span>
+        </label>
+            <input type="text" name="x_subscribe_form&#091;first-name&#093;" id="x_subscribe_form_first_name" placeholder="First Name" required>
+    </fieldset>
+  
+  
+  
+  <fieldset>
+          <label for="x_subscribe_form_email">
+        <span>
+          Email Address          <span class="required">*</span>
+        </span>
+      </label>
+        <input type="email" name="x_subscribe_form&#091;email&#093;" id="x_subscribe_form_email" placeholder="email@example.com" required>
+  </fieldset>
+
+  <fieldset>
+    <input type="submit" name="x_subscribe_form&#091;submit&#093;" class="submit" value="Send me only the useful articles!">
+  </fieldset>
+
+</form>
+
+</div></div></div></div>      </aside>
+
+    
+  </div>
+
+
+
+  
+    
+  
+
+  <footer class="x-colophon top" role="contentinfo">
+    <div class="x-container max width">
+
+      <div class="x-column x-md x-1-3"></div><div class="x-column x-md x-1-3"></div><div class="x-column x-md x-1-3 last"></div>
+    </div>
+  </footer>
+
+
+  
+    <footer class="x-colophon bottom" role="contentinfo">
+      <div class="x-container max width">
+
+                  
+<ul id="menu-x-demo-menu-2" class="x-nav"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-281"><a href="http://www.dotnetodyssey.com/about-me/">About Me&#8230;</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-348"><a href="http://www.dotnetodyssey.com/free-ebooks/">Free eBooks</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-418"><a href="http://www.dotnetodyssey.com/asp-net-mvc-5-free-course/">ASP.Net MVC 5 Free Course</a></li>
+</ul>        
+                  <div class="x-social-global"></div>        
+                  <div class="x-colophon-content">
+                      </div>
+        
+      </div>
+    </footer>
+
+  
+
+  
+  </div> <!-- END #top.site -->
+
+  
+
+  <script id="x-disqus-comments-embed-js" type="text/javascript">
+    var disqus_shortname = 'dotnetodyssey';
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+
+  
+  <script id="x-disqus-comments-count-js" type="text/javascript">
+    var disqus_shortname = 'dotnetodyssey';
+    (function () {
+      var s = document.createElement('script'); s.async = true;
+      s.type = 'text/javascript';
+      s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+      (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+  </script>
+
+<script type='text/javascript' src='http://www.dotnetodyssey.com/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shCore.js?ver=3.0.9b'></script>
+<script type='text/javascript' src='http://www.dotnetodyssey.com/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushJScript.js?ver=3.0.9b'></script>
+<script type='text/javascript' src='http://www.dotnetodyssey.com/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushXml.js?ver=3.0.9b'></script>
+<script type='text/javascript'>
+	(function(){
+		var corecss = document.createElement('link');
+		var themecss = document.createElement('link');
+		var corecssurl = "http://www.dotnetodyssey.com/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/styles/shCore.css?ver=3.0.9b";
+		if ( corecss.setAttribute ) {
+				corecss.setAttribute( "rel", "stylesheet" );
+				corecss.setAttribute( "type", "text/css" );
+				corecss.setAttribute( "href", corecssurl );
+		} else {
+				corecss.rel = "stylesheet";
+				corecss.href = corecssurl;
+		}
+		document.getElementsByTagName("head")[0].insertBefore( corecss, document.getElementById("syntaxhighlighteranchor") );
+		var themecssurl = "http://www.dotnetodyssey.com/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/styles/shThemeDefault.css?ver=3.0.9b";
+		if ( themecss.setAttribute ) {
+				themecss.setAttribute( "rel", "stylesheet" );
+				themecss.setAttribute( "type", "text/css" );
+				themecss.setAttribute( "href", themecssurl );
+		} else {
+				themecss.rel = "stylesheet";
+				themecss.href = themecssurl;
+		}
+		//document.getElementById("syntaxhighlighteranchor").appendChild(themecss);
+		document.getElementsByTagName("head")[0].insertBefore( themecss, document.getElementById("syntaxhighlighteranchor") );
+	})();
+	SyntaxHighlighter.config.strings.expandSource = '+ expand source';
+	SyntaxHighlighter.config.strings.help = '?';
+	SyntaxHighlighter.config.strings.alert = 'SyntaxHighlighter\n\n';
+	SyntaxHighlighter.config.strings.noBrush = 'Can\'t find brush for: ';
+	SyntaxHighlighter.config.strings.brushNotHtmlScript = 'Brush wasn\'t configured for html-script option: ';
+	SyntaxHighlighter.defaults['pad-line-numbers'] = false;
+	SyntaxHighlighter.defaults['toolbar'] = false;
+	SyntaxHighlighter.all();
+</script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var x_email_forms = {"ajaxurl":"http:\/\/www.dotnetodyssey.com\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://www.dotnetodyssey.com/wp-content/plugins/x-email-mailchimp/email-integration/js/site/main.js'></script>
+<script type='text/javascript' src='http://www.dotnetodyssey.com/wp-content/themes/x/framework/js/dist/site/x-body.min.js?ver=4.3.0'></script>
+<script type='text/javascript' src='http://www.dotnetodyssey.com/wp-includes/js/comment-reply.min.js?ver=4.8.2'></script>
+<script type='text/javascript' src='http://www.dotnetodyssey.com/wp-content/plugins/cornerstone/assets/js/dist/site/cs-body.min.js?ver=1.0.11'></script>
+<script type='text/javascript' src='http://www.dotnetodyssey.com/wp-includes/js/wp-embed.min.js?ver=4.8.2'></script>
+
+  
+  
+</body>
+</html>
+<!-- Dynamic page generated in 1.178 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2017-09-29 08:14:27 -->
+
+<!-- super cache -->
